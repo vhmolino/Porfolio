@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d16a0f3023.js" crossorigin="anonymous"></script>
+    <title>Víctor Hernández Carramolino - Currículum</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .curriculum-container {
+            display: flex;
+            flex-wrap: wrap;
+            overflow: hidden;
+            width: 80%;
+            background-color: #000000c4;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s;
+            overflow-y: auto;
+            max-height: 80vh;
+            color: #333;
+            scrollbar-width: thin;
+            scrollbar-color: #458efc;
+            padding-right: 12px;
+            margin-bottom: 20px;
+        }
+
+        .curriculum-container::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        .curriculum-container::-webkit-scrollbar-thumb {
+            background: #458efc;
+            border-radius: 6px;
+        }
+
+        .header {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            background: linear-gradient(to left, #ffffff, #458efc);
+            padding: 20px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            width: 100%;
+        }
+
+        .profile-img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .name-container {
+            flex-grow: 1;
+            margin-top: 10px;
+        }
+
+        h1 {
+            margin: 0;
+            color: #333;
+            font-size: 2em;
+        }
+
+        .card-container {
+            margin: 20px 10px;
+            flex-basis: calc(50% - 20px);
+        }
+
+        .card {
+            background-color: #fff;
+            margin-bottom: 1em;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1em;
+            cursor: pointer;
+            background-color: #458efc;
+            color: #333;
+            border-bottom: 2px solid #1a1a1a;
+        }
+
+        .card-content {
+            padding: 1em;
+            display: none;
+            width: 100%; /* Agregado para corregir el problema de desbordamiento */
+        }
+
+        .card.active .card-content {
+            display: block;
+        }
+
+        .card i {
+            transition: transform 0.3s;
+        }
+
+        .card.active i {
+            transform: rotate(180deg);
+        }
+
+        section {
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+            margin-bottom: 2em;
+            width: 100%;
+        }
+
+        .hidden {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            border-bottom: 2px solid #333;
+            padding-bottom: 0.5em;
+            margin-bottom: 1.5em;
+            color: #333;
+            width: 100%;
+        }
+
+        .section-title i {
+            margin-right: 10px;
+            color: #458efc;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 0.5em;
+        }
+
+        .bar-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1em;
+        }
+
+        .bar-label {
+            width: 120px;
+            margin-right: 10px;
+            color: #333;
+        }
+
+        .bar {
+            flex-grow: 1;
+            height: 20px;
+            background-color: #555;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 100%;
+            background-color: #458efc;
+            border-radius: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.5em 1em;
+            text-decoration: none;
+            background-color: #458efc;
+            color: #333;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #99A3A4;
+        }
+
+        .social-icons {
+            position: fixed;
+            top: 100px;
+            left: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            color: #458efc;
+            font-size: 24px;
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #99A3A4;
+        }
+
+        .programming-languages-container {
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .programming-language {
+            width: 100px;
+            height: 100px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    </style>
+
+    </style>
+</head>
+
+<body>
+    <div class="curtain"></div> 
+    <div class="curriculum-container hidden">
+        <div class="header">
+            <img class="profile-img" src="img/fotoCurri2.jpg" alt="Tu Foto">
+            <div class="name-container">
+                <h1>Víctor Hernández Carramolino</h1>
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-home"></i> <h2>Resumen Profesional</h2>
+                </div>
+                <div class="card-content">
+                    <p>Trabajo como repartidor de Dominos Pizza pero tengo fuerte pasión por la informática y el desarrollo de software. Poseo habilidades técnicas en programación, incluyendo Java (alto), HTML (alto), CSS (alto), y un buen conocimiento de tecnologías como MySQL y SQL Server. Mi formación incluye un título de técnico informático y actualmente estoy estudiando un ciclo superior en Desarrollo de Aplicaciones Multiplataforma. Soy un apasionado de la tecnología, con habilidades lógicas sólidas y un deseo constante de aprendizaje.</p>
+                    <p>Soy un comunicador eficaz y disfruto trabajando en equipo, donde puedo aprovechar mis habilidades de gestión del tiempo y adaptabilidad. Mi certificación en Responsive Web Design y mi experiencia en desarrollo de software son activos que complementan mi perfil, lo que me hace un candidato versátil y comprometido en mi camino hacia una carrera en el desarrollo de aplicaciones.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-briefcase"></i> <h2>Experiencia Laboral</h2>
+                </div>
+                <div class="card-content">
+                    <ul>
+                        <li>
+                            <strong>Domino's Pizza</strong>
+                            <ul>
+                                <li>Repartidor</li>
+                                <li>Octubre 2023 - Actualidad</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Mercadona</strong>
+                            <ul>
+                                <li>Cajas y reposición</li>
+                                <li>Noviembre 2022-Enero 2023</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Prácticas de grado medio</strong>
+                            <ul>
+                                <li>Instituto de Enseñanza Secundaria "Luis Vives" (Valencia)</li>
+                                <li>Marzo-Junio 2022</li>
+                                <li>Cambio del cableado de la red del instituto</li>
+                                <li>Reparación de equipos, tanto software como hardware</li>
+                                <li>Testeo de equipos</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-graduation-cap"></i> <h2>Formación</h2>
+                </div>
+                <div class="card-content">
+                    <ul>
+                        <li>
+                            <strong>Grado medio en sistemas microinformáticos y redes</strong>
+                            <ul>
+                                <li>Enseñanzas profesionales Sorolla (Valencia)</li>
+                                <li>2020-2022</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Grado superior en desarrollo de aplicaciones multiplataforma</strong>
+                            <ul>
+                                <li>Campus Cámara FP Escuela de Negocios (Valencia)</li>
+                                <li>Cursando</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-code"></i> <h2>Lenguajes de Programación</h2>
+                </div>
+                <div class="card-content programming-languages-container">
+                    <div class="programming-language" style="background-image: url('img/html5-img.png');"></div>
+                    <div class="programming-language" style="background-image: url('img/css.png');"></div>
+                    <!-- Agrega más imágenes de lenguajes de programación según sea necesario -->
+                </div>
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-address-card"></i> <h2>Contacto</h2>
+                </div>
+                <div class="card-content">
+                    <ul>
+                        <li>
+                            <strong>Email:</strong> hernandezcarramolinov@gmail.com
+                        </li>
+                        <li>
+                            <strong>Teléfono:</strong> +34 672362472
+                        </li>
+                    </ul>
+                    <a href="archivos/CurriculumVictorHernandezCarramolino.pdf" download="Victor_Hernandez_CV.pdf" class="btn">Descargar CV</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="social-icons">
+        <a href="URL_DEL_PORTAFOLIO" target="_blank" title="Portafolio"><i class="fas fa-briefcase"></i></a>
+        <a href="https://www.linkedin.com/in/v%C3%ADctor-h%C3%A9rnandez-carramolino-5b828825a/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <script>
+         document.addEventListener("DOMContentLoaded", function () {
+        const cards = document.querySelectorAll('.card');
+
+            cards.forEach(card => {
+                card.addEventListener('click', () => {
+                    card.classList.toggle('active');
+
+                    // Agregar lógica para mostrar u ocultar imágenes aquí
+                    const images = card.querySelectorAll('.language-logo'); // Reemplaza '.language-logo' con la clase real de tus imágenes
+
+                    images.forEach(image => {
+                        image.classList.toggle('hidden');
+                    });
+                });
+            });
+
+            const curriculumContainer = document.querySelector('.curriculum-container');
+            const curtain = document.querySelector('.curtain');
+
+            setTimeout(() => {
+                curtain.style.opacity = '0'; // Desvanece el telón
+                curriculumContainer.classList.remove('hidden');
+            }, 500);
+        });
+    </script>
+</body>
+
+</html>
