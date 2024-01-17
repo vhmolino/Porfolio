@@ -1,0 +1,551 @@
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
+
+* {
+    box-sizing: border-box;
+}
+
+.flex-box {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+main {
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.central {
+    display: flex;
+    background-color: #96e5dc;
+    color: white;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+header button {
+    margin: 10px;
+}
+
+.about-me {
+    flex-direction: column;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    background-color: rgba(96, 104, 108) !important;
+    min-width: 95%;
+    padding: 50px;
+    box-shadow: 0 0 20px rgba(128, 128, 128, 0.985);
+}
+
+.about-me a:hover {
+    color: white;
+}
+
+.container-titulacion {
+    margin: 0 auto;
+    max-width: 460px;
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.container-img {
+    padding: 20px;
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    max-width: 300px;
+}
+
+.container-img img {
+    max-width: 100%;
+    /* Asegura que la imagen no se desborde del contenedor */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+    box-shadow: 0 0 30px rgba(245, 245, 245, 0.5);
+    /* Sombra negra alrededor del círculo */
+}
+
+header {
+    flex-wrap: wrap;
+    height: 100px;
+    width: 100%;
+    background-color: rgba(96, 104, 108) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(128, 128, 128, 0.985);
+    position: fixed;
+    /* Fija el header en la parte superior */
+    top: 0;
+    /* Coloca el header en la parte superior */
+    z-index: 1000;
+    /* Asegura que el header esté en la capa superior */
+
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-projectos {
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-educacion {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+ul {
+    max-height: 50px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li {
+    margin: 50px 10px;
+}
+
+p {
+    margin: 0;
+    font-size: 15px;
+}
+
+
+a {
+    color: #96e5dc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    /*Popiedades de la lista, estilo basico y horientacion*/
+    list-style: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#burger-icon {
+    /*caja con las 3 lineas y el menu ul que contiene los links*/
+    margin: auto 0;
+    display: none;
+    cursor: context-menu;
+}
+
+#burger-icon div {
+    /*Configuracion de las 3 lineas*/
+    width: 35px;
+    height: 3px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.5s;
+}
+
+.open .bar1 {
+    /*Cunado se activa el script se da la clase .open y se realiza el respectivo movimiento en las 3 lineas*/
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .bar2 {
+    opacity: 0;
+}
+
+.open .bar3 {
+    transform: rotate(45deg) translate(-6px, -6px);
+}
+
+#burger-icon a {
+    /*Estilo de la etiqueta a para que sea igual*/
+    text-decoration: none;
+    font-family: fantasy;
+    color: black;
+}
+
+.open .mobile-menu {
+    /*Cuando este abierto la lista aparece con sus propiedades*/
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /*Para alinear los elementos del menu al inicio de la pagina*/
+}
+
+.mobile-menu {
+    /*configuracion inicial antes de que se abra (clic)*/
+    display: none;
+    /*position: absolute; 
+    top: 50px;
+    left: 0;
+    width: 100%;
+    margin-top: 0px;*/
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(96, 104, 108) !important;
+    min-width: 95%;
+    padding: 50px;
+    box-shadow: 0 0 20px rgba(96, 104, 108) !important;
+}
+
+.educacion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(96, 104, 108) !important;
+    min-width: 95%;
+    padding: 50px;
+    box-shadow: 0 0 20px rgba(96, 104, 108) !important;
+}
+
+.hr-grande {
+    content: "\00a0";
+    /* Espacio en blanco no rompible */
+    display: block;
+    color: 2px solid rgba(150, 229, 220, 1);
+    /* Puedes cambiar "red" al color que desees */
+    width: 70%;
+    margin: 40px 0;
+    /* Ajusta según sea necesario */
+    z-index: 1;
+}
+
+.hr-pequeño {
+    content: "\00a0";
+    /* Espacio en blanco no rompible */
+    display: block;
+    color: rgb(28, 113, 104);
+    /* Puedes cambiar "red" al color que desees */
+    width: 100%;
+    margin-top: 40px;
+    /* Ajusta según sea necesario */
+    margin-bottom: 40px;
+    z-index: 1;
+}
+
+
+.project {
+    margin: 10px 50px;
+    border: 2px solid rgb(150, 229, 220);
+    box-shadow: 0 0 20px rgba(168, 232, 231, 0.5);
+    padding: 10px;
+    width: 300px;
+    transition: all 400ms ease;
+}
+
+.project:hover {
+    transform: scale(1.15);
+}
+.titulo {
+    padding: 10px;
+    margin: 10px;
+    margin: 10px 50px;
+    border: 2px solid rgb(150, 229, 220);
+    box-shadow: 0 0 20px rgba(168, 232, 231, 0.5);
+    padding: 10px;
+    transition: all 400ms ease;
+}
+.recuadro {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
+    margin: 10px 50px;
+    border: 2px solid rgb(150, 229, 220);
+    box-shadow: 0 0 20px rgba(168, 232, 231, 0.5);
+    padding: 10px;
+    transition: all 400ms ease;
+}
+
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(96, 104, 108);
+    min-width: 95%;
+    padding: 50px;
+    box-shadow: rgba(96, 104, 108, 0.98) 0px 0px 20px;
+}
+
+.Resume{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(96, 104, 108);
+    min-width: 95%;
+    padding: 50px;
+    box-shadow: rgba(96, 104, 108, 0.98) 0px 0px 20px;
+}
+
+.skills-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    justify-content: center;
+    
+}
+
+.espacio {
+    margin: 10px;
+    display: flex;
+}
+
+footer {
+    display: flex;
+}
+
+.footer {
+    background-color: rgb(62, 62, 62);
+    display: flex;
+    text-align: center;
+    color: white;
+    flex: 60%;
+    justify-content: center;
+}
+
+#typed-text-container {
+    white-space: wrap;
+}
+
+.img-estudios {
+    max-width: 100px;
+    margin-bottom: 10px;
+    background-color: white;
+}
+
+h2,
+h3 {
+    color: #96e5dc;
+}
+
+h1 {
+    font-size: 50px;
+    color: white !important;
+}
+
+h4 {
+    font-weight: lighter;
+}
+
+
+.recuadro-img-proyectos img {
+    max-width: 100%;
+}
+
+#copyButton {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+#popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%,15%);
+    padding: 20px;
+    background-color: #6f6f6f;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+}
+#AprendiendoEscondidas{
+    display: none;
+}
+#SkillsEscondidas{
+    display: none;
+}
+#softSkillsEscondidas{
+    display: none;
+}
+/* Estilos del tooltip personalizado */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 100px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Estilos generales aquí */
+@media (max-width: 1015px) {
+
+    /*Cuando cumpla la condicion desapacere el nav principal con display none y aparece el menu hamburuesa*/
+    .flex-box {
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 750px) {
+    header {
+        justify-content: space-between;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    #burger-icon {
+        display: block;
+        margin-right: 50px;
+    }
+
+    /*Cuando cumpla la condicion desapacere el nav principal con display none y aparece el menu hamburuesa*/
+    .container-img {
+        max-width: 200px;
+    }
+
+
+    .project {
+        width: 300px;
+        margin: 10px 10px;
+    }
+
+    .container-educacion {
+        max-width: 320px;
+    }
+
+    .container-titulacion {
+        max-width: 300px;
+    }
+
+    .about-me p {
+        max-width: 300px;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    /*Cuando cumpla la condicion desapacere el nav principal con display none y aparece el menu hamburuesa*/
+    .container-img {
+        max-width: 200px;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    .project {
+        width: 300px;
+        margin: 10px 10px;
+    }
+
+    .container-educacion {
+        max-width: 300px;
+    }
+
+    .titulo{
+        max-width: 300px;
+        margin: 10px 0px;
+    }
+    .skills {
+        padding:50px 0px;
+    }
+    .recuadro{
+        width: 300px;
+        padding: 0px;
+        margin: 10px;
+    }
+
+
+}
+
+@media (max-width: 400px) {
+     /*Cuando cumpla la condicion desapacere el nav principal con display none y aparece el menu hamburuesa*/
+     .container-img {
+        max-width: 150px;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    .project {
+        width: 200px;
+        margin: 10px 10px;
+    }
+
+    .container-educacion {
+        max-width: 200px;
+    }
+
+    .titulo{
+        max-width: 200px;
+        margin: 10px 0px;
+    }
+    .skills {
+        padding:50px 0px;
+    }
+    .recuadro{
+        width: 200px;
+        padding: 0px;
+        margin: 10px;
+    }
+
+}

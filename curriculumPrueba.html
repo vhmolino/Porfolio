@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d16a0f3023.js" crossorigin="anonymous"></script>
+    <title>Víctor Hernández Carramolino - Currículum</title>
+    <link rel="stylesheet" href="/css/css1.css">
+</head>
+
+<body>
+    <div class="curtain"></div> 
+    <div class="curriculum-container hidden">
+        <div class="header">
+            <img class="profile-img" src="img/fotoCurri2.jpg" alt="Tu Foto">
+            <div class="name-container">
+                <h1>Víctor Hernández Carramolino</h1>
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-home"></i> <h2>Resumen Profesional</h2>
+                </div>
+                <div class="card-content">
+                    <p>Trabajo como repartidor de Dominos Pizza pero tengo fuerte pasión por la informática y el desarrollo de software. Poseo habilidades técnicas en programación, incluyendo Java (alto), HTML (alto), CSS (alto), y un buen conocimiento de tecnologías como MySQL y SQL Server. Mi formación incluye un título de técnico informático y actualmente estoy estudiando un ciclo superior en Desarrollo de Aplicaciones Multiplataforma. Soy un apasionado de la tecnología, con habilidades lógicas sólidas y un deseo constante de aprendizaje.</p>
+                    <p>Soy un comunicador eficaz y disfruto trabajando en equipo, donde puedo aprovechar mis habilidades de gestión del tiempo y adaptabilidad. Mi certificación en Responsive Web Design y mi experiencia en desarrollo de software son activos que complementan mi perfil, lo que me hace un candidato versátil y comprometido en mi camino hacia una carrera en el desarrollo de aplicaciones.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-briefcase"></i> <h2>Experiencia Laboral</h2>
+                </div>
+                <div class="card-content">
+                    <ul>
+                        <li>
+                            <strong>Domino's Pizza</strong>
+                            <ul>
+                                <li>Repartidor</li>
+                                <li>Octubre 2023 - Actualidad</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Mercadona</strong>
+                            <ul>
+                                <li>Cajas y reposición</li>
+                                <li>Noviembre 2022-Enero 2023</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Prácticas de grado medio</strong>
+                            <ul>
+                                <li>Instituto de Enseñanza Secundaria "Luis Vives" (Valencia)</li>
+                                <li>Marzo-Junio 2022</li>
+                                <li>Cambio del cableado de la red del instituto</li>
+                                <li>Reparación de equipos, tanto software como hardware</li>
+                                <li>Testeo de equipos</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-graduation-cap"></i> <h2>Formación</h2>
+                </div>
+                <div class="card-content">
+                    <ul>
+                        <li>
+                            <strong>Grado medio en sistemas microinformáticos y redes</strong>
+                            <ul>
+                                <li>Enseñanzas profesionales Sorolla (Valencia)</li>
+                                <li>2020-2022</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Grado superior en desarrollo de aplicaciones multiplataforma</strong>
+                            <ul>
+                                <li>Campus Cámara FP Escuela de Negocios (Valencia)</li>
+                                <li>Cursando</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-code"></i> <h2>Lenguajes de Programación</h2>
+                </div>
+                <div class="card-content programming-languages-container">
+                    <div class="programming-language" style="background-image: url('img/html5-img.png');"></div>
+                    <div class="programming-language" style="background-image: url('img/css.png');"></div>
+                    <!-- Agrega más imágenes de lenguajes de programación según sea necesario -->
+                </div>
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-address-card"></i> <h2>Contacto</h2>
+                </div>
+                <div class="card-content">
+                    <ul>
+                        <li>
+                            <strong>Email:</strong> hernandezcarramolinov@gmail.com
+                        </li>
+                        <li>
+                            <strong>Teléfono:</strong> +34 672362472
+                        </li>
+                    </ul>
+                    <a href="archivos/CurriculumVictorHernandezCarramolino.pdf" download="Victor_Hernandez_CV.pdf" class="btn">Descargar CV</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="social-icons">
+        <a href="URL_DEL_PORTAFOLIO" target="_blank" title="Portafolio"><i class="fas fa-briefcase"></i></a>
+        <a href="https://www.linkedin.com/in/v%C3%ADctor-h%C3%A9rnandez-carramolino-5b828825a/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <script>
+         document.addEventListener("DOMContentLoaded", function () {
+        const cards = document.querySelectorAll('.card');
+
+            cards.forEach(card => {
+                card.addEventListener('click', () => {
+                    card.classList.toggle('active');
+
+                    // Agregar lógica para mostrar u ocultar imágenes aquí
+                    const images = card.querySelectorAll('.language-logo'); // Reemplaza '.language-logo' con la clase real de tus imágenes
+
+                    images.forEach(image => {
+                        image.classList.toggle('hidden');
+                    });
+                });
+            });
+
+            const curriculumContainer = document.querySelector('.curriculum-container');
+            const curtain = document.querySelector('.curtain');
+
+            setTimeout(() => {
+                curtain.style.opacity = '0'; // Desvanece el telón
+                curriculumContainer.classList.remove('hidden');
+            }, 500);
+        });
+    </script>
+</body>
+
+</html>

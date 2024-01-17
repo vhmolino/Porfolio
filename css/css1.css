@@ -1,0 +1,224 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.curriculum-container {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    width: 80%;
+    background-color: #000000c4;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+    overflow-y: auto;
+    max-height: 80vh;
+    color: #333;
+    scrollbar-width: thin;
+    scrollbar-color: #458efc;
+    padding-right: 12px;
+    margin-bottom: 20px;
+}
+
+.curriculum-container::-webkit-scrollbar {
+    width: 12px;
+}
+
+.curriculum-container::-webkit-scrollbar-thumb {
+    background: #458efc;
+    border-radius: 6px;
+}
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    background: linear-gradient(to left, #ffffff, #458efc);
+    padding: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: 100%;
+}
+
+.profile-img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.name-container {
+    flex-grow: 1;
+    margin-top: 10px;
+}
+
+h1 {
+    margin: 0;
+    color: #333;
+    font-size: 2em;
+}
+
+.card-container {
+    margin: 20px 10px;
+    flex-basis: calc(50% - 20px);
+}
+
+.card {
+    background-color: #fff;
+    margin-bottom: 1em;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+    cursor: pointer;
+    background-color: #458efc;
+    color: #333;
+    border-bottom: 2px solid #1a1a1a;
+}
+
+.card-content {
+    padding: 1em;
+    display: none;
+    width: 100%; /* Agregado para corregir el problema de desbordamiento */
+}
+
+.card.active .card-content {
+    display: block;
+}
+
+.card i {
+    transition: transform 0.3s;
+}
+
+.card.active i {
+    transform: rotate(180deg);
+}
+
+section {
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    margin-bottom: 2em;
+    width: 100%;
+}
+
+.hidden {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.5em;
+    margin-bottom: 1.5em;
+    color: #333;
+    width: 100%;
+}
+
+.section-title i {
+    margin-right: 10px;
+    color: #458efc;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 0.5em;
+}
+
+.bar-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.bar-label {
+    width: 120px;
+    margin-right: 10px;
+    color: #333;
+}
+
+.bar {
+    flex-grow: 1;
+    height: 20px;
+    background-color: #555;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.bar-fill {
+    height: 100%;
+    background-color: #458efc;
+    border-radius: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background-color: #458efc;
+    color: #333;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #99A3A4;
+}
+
+.social-icons {
+    position: fixed;
+    top: 100px;
+    left: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #458efc;
+    font-size: 24px;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #99A3A4;
+}
+
+.programming-languages-container {
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.programming-language {
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
