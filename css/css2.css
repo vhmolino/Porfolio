@@ -189,25 +189,27 @@ ul {
     /*Estilo de la etiqueta a para que sea igual*/
     text-decoration: none;
     font-family: fantasy;
-    color: black;
+    color: white;
+    width: 100%;
+    background-color: #555;
 }
 
 .open .mobile-menu {
     /*Cuando este abierto la lista aparece con sus propiedades*/
-    display: flex;
+    display: block;
     flex-direction: column;
     justify-content: flex-start;
+    background-color: aqua;
     /*Para alinear los elementos del menu al inicio de la pagina*/
 }
 
 .mobile-menu {
     /*configuracion inicial antes de que se abra (clic)*/
     display: none;
-    /*position: absolute; 
-    top: 50px;
-    left: 0;
+    position: relative;
     width: 100%;
-    margin-top: 0px;*/
+    margin-top: 0px;
+    background-color: aqua;
 }
 
 .projects {
@@ -452,7 +454,7 @@ h4 {
 
     #burger-icon {
         display: block;
-        margin-right: 50px;
+        padding-right: 50px;
     }
 
     /*Cuando cumpla la condicion desapacere el nav principal con display none y aparece el menu hamburuesa*/
