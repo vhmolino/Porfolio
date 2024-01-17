@@ -22,7 +22,7 @@ body {
 
 .central {
     display: flex;
-    background-color: #96e5dc;
+    background-color: #96e5dc !important;
     color: white;
     flex-direction: column;
     flex-wrap: wrap;
@@ -262,7 +262,7 @@ ul {
 
 .project {
     margin: 10px 50px;
-    border: 2px solid rgb(150, 229, 220);
+    border: 2px solid rgb(150, 229, 220) !important;
     box-shadow: 0 0 20px rgba(168, 232, 231, 0.5);
     padding: 10px;
     width: 300px;
