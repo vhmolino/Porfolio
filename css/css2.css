@@ -221,7 +221,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(150, 229, 220, 1) !important;
+  background-color: rgb(117, 140, 242) !important;
   list-style: none;
   justify-content: center;
   padding: 0;
@@ -239,7 +239,7 @@ a:hover {
 
 .mobile-menu a {
   font-size: 20px;
-  color: rgba(96, 104, 108) !important;
+  color: white !important;
   padding: 10px;
   display: block;
   transition: 0.3s;
@@ -369,6 +369,8 @@ a:hover {
 .espacio {
   margin: 10px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 footer {
@@ -418,6 +420,14 @@ h4 {
   max-width: 100%;
 }
 
+#DominosEscondido {
+  display: none;
+}
+
+#MercadonaEscondido {
+  display: none;
+}
+
 #copyButton {
   padding: 10px;
   font-size: 16px;
@@ -445,6 +455,33 @@ h4 {
 #softSkillsEscondidas {
   display: none;
 }
+
+/* Nuevo div overlay para cubrir toda la pantalla */
+.overlay {
+    position: fixed;
+    top: 0; /* Cambiado de top a bottom */
+    left: 0;
+    width: 100%;
+    height: 100%; /* Cambiado de 100% a 0 */
+    background-color: rgb(117, 140, 242);
+    opacity: 0;
+    z-index: 2000;
+    transition: height 0.5s ease, opacity 0.5s ease; /* Cambiado de width a height */
+}
+
+.ov2 {
+    transition: height 1s ease, opacity 0.5s ease; /* Cambiado de width a height */
+}
+
+.ov3 {
+    transition: height 1.5s ease, opacity 0.5s ease; /* Cambiado de width a height */
+}
+
+.overlay.active {
+    height:0%; /* Cambiado de 0% a 100% */
+    opacity: 1;
+}
+
 /* Estilos del tooltip personalizado */
 .tooltip {
   position: relative;
