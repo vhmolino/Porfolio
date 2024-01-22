@@ -434,6 +434,12 @@ h4 {
 #MercadonaEscondido {
   display: none;
 }
+#TrabajosEscondidos{
+  display: none;
+}
+#DestinoEscondido{
+  display: none;
+}
 
 #copyButton {
   padding: 10px;
