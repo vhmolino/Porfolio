@@ -531,15 +531,10 @@ h4 {
   /*Cuando cumpla la condicion desapacere el nav principal con display none y aparece el menu hamburuesa*/
   .flex-box {
     flex-direction: column;
+    align-items: center;
   }
 }
-
-@media (max-width: 750px) {
-  header {
-    justify-content: space-between;
-    display: flex;
-  }
-
+@media (max-width: 850px) {
   header nav {
     display: none;
   }
@@ -547,6 +542,14 @@ h4 {
   #burger-icon {
     display: block;
   }
+
+  header {
+    justify-content: space-between;
+    display: flex;
+  }
+}
+
+@media (max-width: 750px) {
 
   /*Cuando cumpla la condicion desapacere el nav principal con display none y aparece el menu hamburuesa*/
   .container-img {
@@ -561,6 +564,12 @@ h4 {
     max-width: 300px;
   }
   h3 {
+    text-align: center;
+  }
+  .central{
+    max-width: 100%;
+  }
+  h1{
     text-align: center;
   }
 }
@@ -615,9 +624,6 @@ h4 {
 }
 
 @media (max-width: 400px) {
-  .central{
-    max-width: 100%;
-  }
   /*Cuando cumpla la condicion desapacere el nav principal con display none y aparece el menu hamburuesa*/
   .container-img {
     max-width: 150px;
