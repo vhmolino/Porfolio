@@ -454,6 +454,7 @@ h4 {
   left: 50%;
   transform: translate(-50%, 15%);
   padding: 20px;
+  color: white;
   background-color: #6f6f6f;
   border: 1px solid #ccc;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
