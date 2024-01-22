@@ -26,7 +26,7 @@ body {
   color: white;
   flex-direction: column;
   flex-wrap: wrap;
-  max-width: 1250px;
+  max-width: 80%;
   margin: 0px auto;
 }
 
@@ -599,6 +599,10 @@ h4 {
 }
 
 @media (max-width: 400px) {
+
+  .central{
+    max-width: 100%;
+  }
   /*Cuando cumpla la condicion desapacere el nav principal con display none y aparece el menu hamburuesa*/
   .container-img {
     max-width: 150px;
