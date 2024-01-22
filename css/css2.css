@@ -367,10 +367,17 @@ a:hover {
 }
 
 .espacio {
-  margin: 10px;
+  margin: 20px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  max-width: 180px;
+  text-align: center;
+}
+.espacio img{
+  padding-bottom: 10px;
 }
 
 footer {
@@ -599,7 +606,6 @@ h4 {
 }
 
 @media (max-width: 400px) {
-
   .central{
     max-width: 100%;
   }
