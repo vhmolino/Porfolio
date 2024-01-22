@@ -88,8 +88,10 @@ header button:hover {
 
 .container-img img {
   max-width: 100%;
+  object-fit: cover;
   /* Asegura que la imagen no se desborde del contenedor */
-  height: auto;
+  height: 100%;
+  width: 100%;
   /* Mantiene la proporción de la imagen */
   box-shadow: 0 0 30px rgba(245, 245, 245, 0.5);
   /* Sombra negra alrededor del círculo */
