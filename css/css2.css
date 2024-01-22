@@ -6,7 +6,7 @@
 
 .flex-box {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   flex-wrap: wrap;
 }
 main {
