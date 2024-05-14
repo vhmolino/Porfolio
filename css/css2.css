@@ -442,6 +442,9 @@ h4 {
 #DestinoEscondido{
   display: none;
 }
+#PracticasEscondido{
+  display: none;
+}
 
 #copyButton {
   padding: 10px;
